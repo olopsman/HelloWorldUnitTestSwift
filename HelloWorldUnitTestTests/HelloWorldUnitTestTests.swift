@@ -10,6 +10,15 @@ import XCTest
 
 class HelloWorldUnitTestTests: XCTestCase {
 
+
+    func testHelloWorldWithNoNameReturnsHelloWorld() {
+        XCTAssertEqual(hello(name: .none), "Hello, world")
+    }
+
+    func testHellowWorldWithNameReturnsHelloUser() {
+        XCTAssertEqual(hello(name: "Ada"), "Hello, Ada")
+    }
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
